@@ -1,0 +1,39 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "version": "v0",
+    "title": "Open AI Klarna product Api"
+  },
+  "servers": [
+    {
+      "url": "https://www.googleapis.com/calendar/v3/calendars/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "open-ai-product-endpoint",
+      "description": "Open AI Product Endpoint. Management Google Calendar"
+    }
+  ],
+  "paths": {
+    "{calendarId}/events": {
+      "get": {
+        "tags": [
+          "open-ai-product-endpoint"
+        ],
+        "summary": "API para listar todos os eventos que existem no workspace do Google Calendar",
+        "operationId": "listGoogleCalendarEvents",
+        "parameters": [
+          {
+            "name": "calendarId",
+            "description": "O calendarId é usado como identificador único para buscar as informações da agenda.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
